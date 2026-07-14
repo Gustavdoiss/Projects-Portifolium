@@ -1,0 +1,218 @@
+body {
+  background-color: lightblue;
+  overflow-y: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topBar {
+  border-radius: 20px;
+  box-shadow: -1px 10px 30px rgba(5, 5, 50, 0.789);
+  overflow: hidden;
+  transition: transform 0.15s;
+}
+
+.topBar:hover {
+  transform: translateY(5px);
+}
+
+header {
+  display: flex;
+  height: 95px;
+  width: 100%;
+  background: linear-gradient(black, rgba(5, 5, 50, 0.789));
+  position: relative;
+  color: white;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 30px;
+}
+
+.logoDiv,
+.nameDiv,
+.meme {
+  width: 33%;
+  text-align: center;
+}
+
+.logoDiv {
+  text-align: left;
+}
+
+.logo {
+  margin-left: 20px;
+  height: 94px;
+  object-fit: cover;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.name {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 50px;
+  font-family: Nabla, Arial;
+  display: inline-block;
+  padding-top: 0;
+  text-align: center;
+}
+
+.subtitle {
+  height: 20px;
+  color: #d8d8ff;
+}
+
+.meme {
+  margin-top: 25px;
+}
+
+.navbar {
+  background: rgba(5, 5, 50, 0.789);
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 34px;
+  margin: 0;
+  padding: 14px 0;
+}
+
+.navbar a {
+  color: #d8d8ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+
+.navbar a:hover {
+  color: #ffd23f;
+}
+
+.navbar a.active {
+  color: #ffd23f;
+}
+
+/* ---- HERO + BUSCA ---- */
+.hero {
+  text-align: center;
+  padding: 70px 20px 50px;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  color: #14161a;
+  margin: 0 0 10px;
+}
+
+.hero-sub {
+  color: #5a6472;
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+
+.pill-bar {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  padding: 6px 6px 6px 24px;
+  width: 600px;
+  max-width: 90%;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.pill-bar:focus-within {
+  border-color: #e8590c;
+  box-shadow: 0 6px 24px rgba(232, 89, 12, 0.25);
+}
+
+.pill-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 12px 0;
+}
+
+.hint {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: #9aa4b2;
+}
+
+/* ---- COMO FUNCIONA ---- */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 20px 60px;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(20, 22, 46, 0.08);
+}
+
+.step .num {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd23f, #e8590c);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+
+.step h3 {
+  font-size: 0.95rem;
+  color: #14161a;
+  margin: 0 0 6px;
+}
+
+.step p {
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+/* ---- FORMATOS SUPORTADOS ---- */
+.formats {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.formats-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #9aa4b2;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.badge {
+  display: inline-block;
+  background: #fff;
+  color: #14161a;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 999px;
+  margin: 0 6px;
+  box-shadow: 0 2px 8px rgba(20, 22, 46, 0.08);
+}
