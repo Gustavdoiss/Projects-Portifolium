@@ -32,4 +32,4 @@ A curated collection of front-end projects — including personal work and chall
 ## 👤 Author
 
 - GitHub: [@Gustavdoiss](https://github.com/Gustavdoiss)
-- LinkedIn: [Gustavo de Sena](https://linkedin.com/in/gustavo-de-sena)
+- LinkedIn: [Gustavo de Sena](https://linkedin.com/in/gustavo-de-sena-da-silva-47052133a)
