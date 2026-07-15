@@ -75,6 +75,7 @@ function removerExts(cards) {
 function toggleTheme() {
   themeButton.addEventListener('click', function() {
     document.body.classList.toggle('light');
+    themeButton.setAttribute('aria-pressed', document.body.classList.contains('light'));
     logo.src = document.body.classList.contains('light') ? "./assets/images/logo-light.svg" : "./assets/images/logo-dark.svg";
     themeButton.querySelector('img').src = document.body.classList.contains('light') ? "./assets/images/icon-moon.svg" : "./assets/images/icon-sun.svg";
   })
