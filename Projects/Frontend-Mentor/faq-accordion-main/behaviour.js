@@ -6,9 +6,9 @@ question.forEach(function(question) {
 
   question.addEventListener('click', function() {
     if (answer.classList.contains('shown')) {
-      img.src = '/faq-accordion-main/assets/images/icon-plus.svg';
+      img.src = './assets/images/icon-plus.svg';
     } else {
-      img.src = '/faq-accordion-main/assets/images/icon-minus.svg';
+      img.src = './assets/images/icon-minus.svg';
     }
     answer.classList.toggle('shown');
   });
