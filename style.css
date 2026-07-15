@@ -5,7 +5,7 @@ body {
   color: #e5e5e5;
   min-height: 100vh;
 }
-/* ── HERO ── */
+/*  HERO  */
 .hero {
   padding: 80px 24px 60px;
   max-width: 800px;
@@ -46,14 +46,14 @@ body {
   background: #7c5cbf;
   color: #fff;
 }
-/* ── DIVIDER ── */
+/*  DIVIDER  */
 .divider {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 24px;
   border-top: 1px solid #222;
 }
-/* ── SECTION TITLE ── */
+/*  SECTION TITLE  */
 .section-title {
   max-width: 800px;
   margin: 48px auto 24px;
@@ -64,7 +64,7 @@ body {
   text-transform: uppercase;
   color: #555;
 }
-/* ── CARDS ── */
+/*  CARDS  */
 .cards {
   max-width: 800px;
   margin: 0 auto;
