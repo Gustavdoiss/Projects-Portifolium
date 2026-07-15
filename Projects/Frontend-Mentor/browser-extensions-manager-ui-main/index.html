@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    
+    <img class="logo" src="./assets/images/logo-dark.svg" alt="logo">
+    <button class="theme-switcher" aria-label="icon-sun-theme" aria-pressed="false">
+      <img src="./assets/images/icon-sun.svg" alt="theme-button-img">
+    </button>
+
+  </header>
+
+  <main>
+    
+    <div class="filters">
+      <h1>Extensions List</h1>
+      <div class="filtersButtons">
+
+        <button class="allFilt">      All</button>
+        <button class="activeFilt">   Active</button>
+        <button class="inactiveFilt"> Inactive</button>
+
+      </div>
+    </div>
+
+    <div class="extensions"></div>
+
+  </main>
+
+  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>

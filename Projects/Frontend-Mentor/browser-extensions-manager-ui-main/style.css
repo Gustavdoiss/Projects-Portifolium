@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'NotoSans';
+    src: url('./assets/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+:root {
+    --bg-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --hdr-cards-bg:  hsl(226, 25%, 17%);
+    --border:        hsl(225, 23%, 24%);
+    --text1:         hsl(200, 60%, 99%);
+    --text1-inv:     hsl(227, 75%, 14%);
+    --text2:         rgb(172, 172, 172);
+    --button-border: hsl(0, 0%, 78%, 0.15);
+    --active-button: hsl(3, 71%, 56%);
+    --inactive:      hsl(225, 23%, 24%);
+}
+
+.light {
+    --bg-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --hdr-cards-bg: hsl(200, 60%, 99%);
+    --border:       hsl(217, 61%, 90%);
+    --text1:        hsl(227, 75%, 14%);
+    --text1-inv:    hsl(200, 60%, 99%);
+    --text2:        hsl(226, 11%, 37%);
+    --button-border: hsl(0, 0%, 78%, 0.4);
+    --inactive:     hsl(225, 8%, 90%);
+}
+
+.card.hidden {
+    display: none;
+}
+
+.filters button.active {
+    background-color: var(--active-button);
+    color: var(--text1-inv);
+}
+
+body {
+    font-family: 'NotoSans', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text1);
+    padding: 25px 125px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    color: var(--text1);
+}
+
+button:focus-visible:focus-visible{
+    outline: 2px solid var(--active-button);
+    outline-offset: 2px;
+}
+
+label.toggle:focus-within{
+    outline: 2px solid var(--active-button);
+    outline-offset: 2px;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+}
+
+header {
+    background-color: var(--hdr-cards-bg);
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 11px;
+}
+
+.theme-switcher {
+    background-color: var(--inactive);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.theme-switcher,
+.filters button:hover {
+    opacity: 0.8;
+}
+
+.filters {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filters h1 {
+    margin: 0;
+}
+
+.filters button {
+    background-color: var(--text1-inv);
+    border: 0.1px solid var(--button-border);
+    border-radius: 20px;
+    padding: 8px 13px;
+    transition: opacity 0.15s;
+}
+
+.extensions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card {
+    background: var(--hdr-cards-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    transition: all 0.15s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.extInfo {
+    margin-left: 10px;
+}
+
+.extInfo h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.extInfo p {
+    margin-top: 0;
+    font-size: 13px;
+    color: var(--text2);
+}
+
+.extButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.extRemove {
+    font-size: 12px;
+    background: none;
+    padding: 7px 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: var(--button-border);
+    transition: all 0.15s;
+}
+
+.extRemove:hover {
+    background-color: var(--active-button);
+    color: var(--text1-inv);
+}
+
+label.toggle {
+    cursor: pointer;
+    position: relative;
+    background-color: var(--inactive);
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: var(--button-border);
+    width: 30px;
+    height: 15px;
+}
+
+label.toggle::before {
+    content: '';
+    position: absolute;
+    top: 0.5px;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    transition: left 0.15s;
+}
+
+label.toggle:has(input:checked) {
+    background-color: var(--active-button);
+}
+
+label.toggle:has(input:checked)::before {
+    left: 15px; 
+}
