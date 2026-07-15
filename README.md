@@ -16,7 +16,7 @@ A curated collection of front-end projects — including personal work and chall
 
 | Challenge | Techs | Live | Code |
 |---|---|---|---|
-| Browser Extension Manager UI | HTML · CSS (Flexbox + Grid) · JS | [Preview](https://gustavdoiss.github.io/Projects-Portifolium/Projects/Frontend-Mentor/browser-extensions-manager-ui-main/index.html) | [Code](https://github.com/Gustavdoiss/Projects-Portifolium/tree/main/Projects/Frontend-Mentor/browser-extensions-manager-ui-main) |
+| Browser Extension Manager UI | Fetch API · CSS (Flexbox + Grid) · HTML5 Semantic · Custom Properties | [Preview](https://gustavdoiss.github.io/Projects-Portifolium/Projects/Frontend-Mentor/browser-extensions-manager-ui-main/index.html) | [Code](https://github.com/Gustavdoiss/Projects-Portifolium/tree/main/Projects/Frontend-Mentor/browser-extensions-manager-ui-main) |
 | FAQ Accordion | HTML · CSS (Flexbox) · JS | [Preview](https://gustavdoiss.github.io/Projects-Portifolium/Projects/Frontend-Mentor/faq-accordion-main/index.html) | [Code](https://github.com/Gustavdoiss/Projects-Portifolium/tree/main/Projects/Frontend-Mentor/faq-accordion-main) |
 
 ---
