@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Typing Speed Test</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    
+    <div class="logoDiv">
+
+      <img src="" alt="Typing Speed Test">
+
+    </div>
+    
+    <div class="persBest">
+
+      <p class="best">
+        <img src="" alt=""> Best: <span class="bestWpm"></span>
+      </p>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="test">
+      
+      <div class="statsCurrent">
+
+      <div class="wpm">
+        <p>
+          WPM: <span>0</span>
+        </p>
+      </div>
+      <div class="accuracy">
+        <p>
+          Accuracy: <span>100%</span>
+        </p>
+      </div>
+      <div class="time">
+        <p>
+          Time: <span>0:60</span>
+        </p>
+      </div>
+
+      </div>
+
+      <div class="modifiers">
+
+      <label for="diffSelector">Difficulty Selector</label>
+      <select id="diffSelector" class="difficulty" autocomplete="off">
+        <option class="easy" value="easy">Easy</option>
+        <option class="medium" value="medium">Medium</option>
+        <option class="hard" value="hard">Hard</option>
+      </select>
+
+      <label for="modeSelector">Mode Selector</label>
+      <select id="modeSelector" class="mode" autocomplete="off">
+        <option class="timed" value="timed">Timed (60s)</option>
+        <option class="passage" value="passage">Passage</option>
+      </select>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="typing">
+
+        <div class="textPassage">
+
+        </div>
+
+        <form class="userT" autocomplete="off">
+          <input type="text">
+        </form>
+
+        <div class="buttonOverlay">
+
+          <button class="startButton">Start Typing Test</button>
+          <p>Or click the text and start typing</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="results hidden">
+      <img class="resultsIcon" src="" alt="">
+
+      <div class="completionMsg">
+        
+        <p class="headline"></p>
+        <p class="subtext"></p>
+
+      </div>
+
+      <div class="finalStats">
+
+        <div class="finalWpm">
+          <p>
+            WPM: <span></span>
+          </p>
+        </div>
+        <div class="finalAccuracy">
+          <p>
+            Accuracy: <span></span>
+          </p>
+        </div>
+        <div class="finalCharacters">
+          <p>
+            Characters: <span class="rights"></span>/<span class="wrongs"></span>
+          </p>
+        </div>
+        <div class="finalTime">
+          <p>
+            Time: <span></span>
+          </p>
+        </div>
+
+      </div>
+
+      <button class="retryButton">Go Again</button>
+
+    </div>
+
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
