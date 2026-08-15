@@ -142,6 +142,12 @@ main {
     position: relative;
 }
 
+.userT {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+}
+
 .buttonOverlay {
     position: absolute;
     top: 50%;

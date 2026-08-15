@@ -37,7 +37,7 @@ async function searchJson() {
     }
 
     dom.start.addEventListener('click', () => {
-        dom.uInput.focus();
+        dom.uInput.focus({ preventScroll: true });
         dom.startOverlay.classList.add('hidden');
         dom.text.classList.add('shown');
         clearInterval(clockId);
