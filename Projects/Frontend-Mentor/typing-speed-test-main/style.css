@@ -1,12 +1,19 @@
 @font-face {
     font-family: 'Sora';
-    src: url(.\assets\fonts\Sora\Sora-VariableFont_wght.ttf) format('truetype');
+    src: url("./assets/fonts/Sora/Sora-VariableFont_wght.ttf") format('truetype');
 }
 
-
+:root {
+    --body-background: hsl(0, 0%, 7%);
+    --normal-text:     hsl(240, 1%, 59%);
+    --backgrounds:     hsl(0, 0%, 15%);
+    --stats:           hsl(240, 3%, 46%);
+    --yellow:          hsl(49, 85%, 70%);
+}
 
 .hidden {
     display: none;
+    opacity: 0;
 }
 
 .right {
@@ -15,4 +22,258 @@
 
 .wrong {
     color: hsl(354, 63%, 57%);
+    text-decoration: underline;
+}
+
+.keyAt {
+    background-color: var(--stats);
+}
+
+body {
+    text-align: center;
+    max-width: 375px;
+    margin: 0 auto;
+    font-family: 'Sora';
+    font-size: 16px;
+    background-color: var(--body-background);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+}
+
+main {
+    display: block;
+}
+
+.logoDiv {
+    display: inline-block;
+}
+
+.persBest {
+    display: inline-block;
+}
+
+.best {
+    color: var(--stats);
+}
+
+.best span {
+    color: white;
+}
+
+.statsCurrent {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    text-align: center;
+    color: var(--stats);
+    padding: 5px 10px;
+}
+
+.statsCurrent p span {
+    display: block;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wpm, .accuracy, .time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    height: 40px;
+    padding: 0px 10px;
+}
+
+.wpm span {
+    color: white;
+    display: block;
+}
+
+.accuracy {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left-width: 1px;
+    border-left-color: var(--stats);
+    border-left-style: solid;
+    border-right-width: 1px;
+    border-right-color: var(--stats);
+    border-right-style: solid;
+}
+
+.accuracy span {
+    color: hsl(354, 63%, 57%);
+}
+
+.time span {
+    color: var(--yellow);
+}
+
+.modifiers {
+    color: var(--stats);
+    margin: 10px 0;
+}
+
+.selector {
+    cursor: pointer;
+    background-color: var(--body-background);
+    border: 1px solid var(--normal-text);
+    border-radius: 5px;
+    width: 150px;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    margin-left: 5px;
+    color: white;
+}
+
+.divider {
+    background-color: var(--stats);
+    height: 1px;
+}
+
+.typing {
+    margin-top: 10px;
+    position: relative;
+}
+
+.userT {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+}
+
+.buttonOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+.startButton {
+    background-color: hsl(214, 100%, 55%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 15px;
+}
+
+.textPassage {
+    filter: blur(4px);
+    font-size: 35px;
+    color: var(--normal-text); 
+    height: 500px;
+    transition: filter 0.5s;
+}
+
+.shown {
+    filter: blur(0px);
+}
+
+input {
+    opacity: 0;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+}
+
+.resultsIcon {
+    width: 60px;
+    height: 60px;
+}
+
+.completionMsg {
+    text-align: center;
+}
+
+.headline {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.subtext {
+    color: var(--normal-text);
+    margin: 4px 0 0;
+}
+
+.finalStats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.finalWpm,
+.finalAccuracy,
+.finalCharacters,
+.finalTime {
+    background-color: var(--backgrounds);
+    border-radius: 8px;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.finalWpm p,
+.finalAccuracy p,
+.finalCharacters p,
+.finalTime p {
+    margin: 0;
+    color: var(--normal-text);
+    font-size: 14px;
+}
+
+.finalWpm span,
+.finalTime span {
+    display: block;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.finalAccuracy span {
+    display: block;
+    color: hsl(354, 63%, 57%);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.rights {
+    color: hsl(140, 63%, 57%);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.wrongs {
+    color: hsl(354, 63%, 57%);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.retryButton {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Sora';
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }

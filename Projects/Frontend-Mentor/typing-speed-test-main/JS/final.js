@@ -1,4 +1,5 @@
-import { testDiv, resultsDiv, finalStats, currStats, compMessage, perBestWpm, perBestAcc } from "./dom.js";
+import { testDiv, resultsDiv, finalStats, currStats, compMessage,
+         perBestWpm, perBestAcc, startOverlay, text, resIcon } from "./dom.js";
 import { countHits } from "./hits.js";
 import { checkStorageWpm, checkStorageAcc } from './storage.js';
 
@@ -10,6 +11,8 @@ export function testEnd(finalTime, hits) {
 
     countHits(hits);
     testDiv.classList.add('hidden');
+    startOverlay.classList.remove('hidden');
+    text.classList.remove('shown');
     resultsDiv.classList.remove('hidden');
 
     finalStats.wpm.textContent = wpm; 
@@ -24,16 +27,19 @@ export function testEnd(finalTime, hits) {
     }
 
     if (newBestWpm === null) {
-        perBestWpm.textContent = wpm;
+        perBestWpm.textContent = `${wpm} WPM`;
         perBestAcc.textContent = `${acc}`;
+        resIcon.src = 'assets/images/icon-completed.svg'
         compMessage.headline.textContent = "Baseline Established!";
         compMessage.subtext.textContent  = "You've set the bar. Now the real challenge begins—time to beat it.";
     }else if (!newBestWpm) {
+        resIcon.src = 'assets/images/icon-completed.svg'
         compMessage.headline.textContent = "Test Complete!";
         compMessage.subtext.textContent  = "Solid run. Keep pushing to beat your high score.";
     }else {
-        perBestWpm.textContent = wpm;
+        perBestWpm.textContent = `${wpm} WPM`;
         perBestAcc.textContent = `${acc}`;
+        resIcon.src = 'assets/images/icon-new-pb.svg'
         compMessage.headline.textContent = "High Score Smashed";
         compMessage.subtext.textContent  = "You're getting faster. That was incredible typing.";
     }
