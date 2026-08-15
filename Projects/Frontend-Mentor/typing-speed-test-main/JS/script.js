@@ -29,7 +29,17 @@ async function searchJson() {
 
     let clockId, time2, i;
 
+    i = Math.floor(Math.random() * 10);
+    for (let char of [...data[dom.modifiers.difficulty.value][i].text]) {
+            const span = document.createElement("span");
+            span.innerText = char;
+            dom.text.append(span);
+    }
+
     dom.start.addEventListener('click', () => {
+        dom.uInput.focus();
+        dom.startOverlay.classList.add('hidden');
+        dom.text.classList.add('shown');
         clearInterval(clockId);
         charArray.length = 0;
         dom.uInput.value = "";
@@ -63,7 +73,7 @@ async function searchJson() {
         }
         dom.text.children[position + 1]?.classList.remove('right');
         dom.text.children[position + 1]?.classList.remove('wrong');
-        dom.text.children[position + 1]?.classList.add('ketAt');
+        dom.text.children[position + 1]?.classList.add('keyAt');
 
         if (dom.uInput.value[position] == dom.text.children[position]?.textContent) {
             if (charArray[position] === undefined) {
@@ -71,6 +81,7 @@ async function searchJson() {
             }
             dom.text.children[position]?.classList.add('right');
             dom.text.children[position]?.classList.remove('wrong');
+            dom.text.children[position]?.classList.remove('keyAt');
 
             if (position + 1 == data[dom.modifiers.difficulty.value][i].text.length) {
                 clearInterval(clockId);
@@ -80,6 +91,7 @@ async function searchJson() {
             charArray[position] = false;
             dom.text.children[position]?.classList.add('wrong');
             dom.text.children[position]?.classList.remove('right');
+            dom.text.children[position]?.classList.remove('keyAt');
         }
 
         countHits(hits);
@@ -94,6 +106,14 @@ async function searchJson() {
             dom.text.removeChild(dom.text.firstChild);
         }
         dom.uInput.value = "";
+
+        i = Math.floor(Math.random() * 10);
+        for (let char of [...data[dom.modifiers.difficulty.value][i].text]) {
+            const span = document.createElement("span");
+            span.innerText = char;
+            dom.text.append(span);
+        }
+
         dom.currStats.accuracy.textContent = '100%';
         if (dom.modifiers.mode.value == "passage") {
             dom.currStats.time.textContent = "0:00";

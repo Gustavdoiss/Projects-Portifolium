@@ -6,6 +6,7 @@ export const startOverlay = document.querySelector('.buttonOverlay');
 export const text = document.querySelector('.textPassage');
 export const testDiv = document.querySelector('.test');
 export const uInput = document.querySelector('.userT input');
+export const span = document.querySelector('span')
 
 export const currStats = {
     wpm: document.querySelector('.wpm span'),
@@ -14,8 +15,8 @@ export const currStats = {
 }
 
 export const modifiers = {
-    difficulty: document.querySelector('.difficulty'),
-    mode: document.querySelector('.mode')
+    difficulty: document.querySelector('#diffSelector'),
+    mode: document.querySelector('#modeSelector')
 }
 
 //DOM Elements Result

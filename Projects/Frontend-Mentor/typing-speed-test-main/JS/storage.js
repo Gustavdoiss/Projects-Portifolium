@@ -28,7 +28,7 @@ if (acc > Number(localStorage.getItem('personalBestAcc'))) {
 
 export function checkEnter() {
   if ( localStorage.getItem('personalBestAcc') && localStorage.getItem('personalBestWpm') ){
-      perBestWpm.textContent = localStorage.getItem('personalBestWpm');
+      perBestWpm.textContent = `${localStorage.getItem('personalBestWpm')} WPM`;
       perBestAcc.textContent = `${localStorage.getItem('personalBestAcc')}%`;
   }
 }
